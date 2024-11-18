@@ -121,14 +121,14 @@ Use the setup commands below to get started:
 conda create -n openvla python=3.10 -y
 conda activate openvla
 
-# Install PyTorch. Below is a sample command to do this, but you should check the following link
-# to find installation instructions that are specific to your compute platform:
-# https://pytorch.org/get-started/locally/
-conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia -y  # UPDATE ME!
-
-# Clone and install the openvla repo
-git clone https://github.com/openvla/openvla.git
+# Clone the openvla repo
+git clone https://github.com/brunomachado37/openvla.git
 cd openvla
+
+# Install minimum requirements 
+pip install -r requirements-min.txt
+
+# Install openvla
 pip install -e .
 
 # Install Flash Attention 2 for training (https://github.com/Dao-AILab/flash-attention)
@@ -526,8 +526,9 @@ train other methods. This step is optional since we provide pretrained OpenVLA c
 [here](experiments/robot/libero/regenerate_libero_dataset.py) and the code we used to convert these
 datasets to the RLDS format [here](https://github.com/moojink/rlds_dataset_builder).)
 ```bash
-git clone git@hf.co:datasets/openvla/modified_libero_rlds
+python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id="openvla/modified_libero_rlds", repo_type="dataset")"
 ```
+This will download the dataset to your HuggingFace Hub cache folder by default, usually located at `~/.cache/huggingface/hub/`.
 
 #### Launching LIBERO Evaluations
 
