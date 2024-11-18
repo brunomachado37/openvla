@@ -1,0 +1,15 @@
+torchrun --standalone --nnodes 1 --nproc-per-node 1 vla-scripts/finetune.py \
+  --vla_path "openvla/openvla-7b" \
+  --data_root_dir DATASET PATH e.g. "/home/username/.cache/huggingface/hub/datasets--openvla--modified_libero_rlds/snapshots/6ce6aaaaabdbe590b1eef5cd29c0d33f14a08551/" \
+  --dataset_name SUBSET NAME e.g. libero_spatial_no_noops \
+  --run_root_dir "runs/checkpoints" \
+  --adapter_tmp_dir "cache" \
+  --use_quantization False \
+  --lora_rank 32 \
+  --batch_size 16 \
+  --grad_accumulation_steps 1 \
+  --learning_rate 5e-4 \
+  --image_aug False \
+  --wandb_project OpenVLA_Libero \
+  --wandb_entity YOUR WANBD USER NAME \
+  --save_steps 5000
