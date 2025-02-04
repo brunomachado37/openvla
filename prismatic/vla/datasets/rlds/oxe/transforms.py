@@ -935,4 +935,5 @@ OXE_STANDARDIZATION_TRANSFORMS = {
     "libero_10_no_noops": libero_dataset_transform,
     ### LIRIS DROID datasets
     "liris_pnp_cube": liris_droid_dataset_transform,
+    "liris_pnp_orange": liris_droid_dataset_transform,
 }
