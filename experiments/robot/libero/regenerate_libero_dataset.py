@@ -70,12 +70,12 @@ def is_noop(action, prev_action=None, threshold=1e-4):
 
 def main(args):
     print(f"Regenerating {args.libero_task_suite} dataset!")
+    existing_files = []
 
     # Create target directory
     if os.path.isdir(args.libero_target_dir):
-        user_input = input(f"Target directory already exists at path: {args.libero_target_dir}\nEnter 'y' to overwrite the directory, or anything else to exit: ")
-        if user_input != 'y':
-            exit()
+        print(f"Target directory already exists at path: {args.libero_target_dir}\n Skiping Existing files !")
+        existing_files = os.listdir(args.libero_target_dir)
     os.makedirs(args.libero_target_dir, exist_ok=True)
 
     # Prepare JSON file to record success/false and initial states per episode
@@ -98,6 +98,10 @@ def main(args):
     for task_id in tqdm.tqdm(range(num_tasks_in_suite)):
         # Get task in suite
         task = task_suite.get_task(task_id)
+        if f"{task.name}_demo.hdf5" in existing_files:
+            print(f"Skipping {task.name} as it already exists in the target directory !")
+            continue
+
         env, task_description = get_libero_env(task, "llava", resolution=IMAGE_RESOLUTION)
 
         # Get dataset for task

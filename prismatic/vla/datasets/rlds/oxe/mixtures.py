@@ -214,5 +214,8 @@ OXE_NAMED_MIXTURES: Dict[str, List[Tuple[str, float]]] = {
     "liris_pnp_orange": [
         ("liris_pnp_orange", 1.0),
     ],
+    "liris_pnp_apple": [
+        ("liris_pnp_apple", 1.0),
+    ],
 }
 # fmt: on
