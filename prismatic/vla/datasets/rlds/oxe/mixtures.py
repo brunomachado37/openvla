@@ -208,14 +208,31 @@ OXE_NAMED_MIXTURES: Dict[str, List[Tuple[str, float]]] = {
     ],
 
     # === Liris ECL Datasets ===
-    "liris_pnp_cube": [
-        ("liris_pnp_cube", 1.0),
+    "liris_droid": [
+        ("liris_pnp_blue_cube", 1.0),
+        ("liris_pnp_red_cube", 1.0),
+        ("liris_pnp_orange", 1.0),
+        ("liris_pnp_apple", 1.0),
+        ("liris_pnp_peach", 1.0),
+        ("liris_fold_fabric_triangle", 1.0),
+    ],
+    "liris_pnp_blue_cube": [
+        ("liris_pnp_blue_cube", 1.0),
     ],
     "liris_pnp_orange": [
         ("liris_pnp_orange", 1.0),
     ],
     "liris_pnp_apple": [
         ("liris_pnp_apple", 1.0),
+    ],
+    "liris_pnp_peach": [
+        ("liris_pnp_peach", 1.0),
+    ],
+    "liris_pnp_red_cube": [
+        ("liris_pnp_red_cube", 1.0),
+    ],
+    "liris_fold_fabric_triangle": [
+        ("liris_fold_fabric_triangle", 1.0),
     ],
 }
 # fmt: on

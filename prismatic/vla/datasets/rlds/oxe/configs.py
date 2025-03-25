@@ -670,7 +670,7 @@ OXE_DATASET_CONFIGS = {
         "state_encoding": StateEncoding.POS_EULER,
         "action_encoding": ActionEncoding.EEF_POS,
     },
-    "liris_pnp_cube": {
+    "liris_pnp_blue_cube": {
         "image_obs_keys": {"primary": "exterior_image_1_left", "secondary": None, "wrist": "wrist_image_left"},
         "depth_obs_keys": {"primary": None, "secondary": None, "wrist": None},
         "state_obs_keys": ["EEF_state", None, "gripper_state"],
@@ -685,6 +685,27 @@ OXE_DATASET_CONFIGS = {
         "action_encoding": ActionEncoding.EEF_POS,
     },
     "liris_pnp_apple": {
+        "image_obs_keys": {"primary": "exterior_image_1_left", "secondary": None, "wrist": "wrist_image_left"},
+        "depth_obs_keys": {"primary": None, "secondary": None, "wrist": None},
+        "state_obs_keys": ["EEF_state", None, "gripper_state"],
+        "state_encoding": StateEncoding.POS_EULER,
+        "action_encoding": ActionEncoding.EEF_POS,
+    },
+    "liris_pnp_peach": {
+        "image_obs_keys": {"primary": "exterior_image_1_left", "secondary": None, "wrist": "wrist_image_left"},
+        "depth_obs_keys": {"primary": None, "secondary": None, "wrist": None},
+        "state_obs_keys": ["EEF_state", None, "gripper_state"],
+        "state_encoding": StateEncoding.POS_EULER,
+        "action_encoding": ActionEncoding.EEF_POS,
+    },
+    "liris_pnp_red_cube": {
+        "image_obs_keys": {"primary": "exterior_image_1_left", "secondary": None, "wrist": "wrist_image_left"},
+        "depth_obs_keys": {"primary": None, "secondary": None, "wrist": None},
+        "state_obs_keys": ["EEF_state", None, "gripper_state"],
+        "state_encoding": StateEncoding.POS_EULER,
+        "action_encoding": ActionEncoding.EEF_POS,
+    },
+    "liris_fold_fabric_triangle": {
         "image_obs_keys": {"primary": "exterior_image_1_left", "secondary": None, "wrist": "wrist_image_left"},
         "depth_obs_keys": {"primary": None, "secondary": None, "wrist": None},
         "state_obs_keys": ["EEF_state", None, "gripper_state"],
